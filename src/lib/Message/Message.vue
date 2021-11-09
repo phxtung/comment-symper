@@ -155,7 +155,7 @@
 								<svg-icon name="pencil" />
 							</slot>
 						</div>
-						<span style="margin-right:10px;cursor:default" @click="messageActionHandler('replyMessage')">Trả lời</span>
+						<span style="margin-right:10px;cursor:pointer" @click="messageActionHandler({ name:'replyMessage', title:'Reply' })">Trả lời</span>
 						<span>{{ message.timestamp }}</span>
 						<span v-if="isCheckmarkVisible">
 							<slot name="checkmark-icon" v-bind="{ message }">

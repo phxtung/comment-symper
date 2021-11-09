@@ -1003,6 +1003,7 @@ export default {
 			this.editedMessage = {}
 			this.messageReply = message
 			this.focusTextarea()
+			this.message = '@' + message.username
 		},
 		editMessage(message) {
 			this.resetMessage()
