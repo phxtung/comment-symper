@@ -57,6 +57,12 @@
 		max-width: 50%;
 		justify-content: flex-start;
 		line-height: 1.4;
+		margin-top: 10px;
+	}
+    
+    .vac-message-reply {
+		margin-left: 35px;
+		margin-top: 0px;
 	}
 
 	.vac-avatar {
@@ -77,19 +83,16 @@
 	}
 
 	.vac-message-container-offset {
-		margin-top: 10px;
 	}
 
 	.vac-offset-current {
-		margin-left: 50%;
-		justify-content: flex-end;
 	}
 
 	.vac-message-card {
 		background: var(--chat-message-bg-color);
 		color: var(--chat-message-color);
 		border-radius: 8px;
-		font-size: 14px;
+		font-size: 15px;
 		padding: 6px 9px 3px;
 		white-space: pre-line;
 		max-width: 100%;
@@ -141,7 +144,7 @@
 
 	.vac-text-username {
 		font-size: 13px;
-		color: var(--chat-message-color-username);
+		color: black;
 		margin-bottom: 2px;
 	}
 
@@ -150,9 +153,10 @@
 	}
 
 	.vac-text-timestamp {
-		font-size: 10px;
+		font-size: 12px;
 		color: var(--chat-message-color-timestamp);
-		text-align: right;
+		text-align: left;
+		padding-top: 5px;
 	}
 
 	.vac-progress-time {
@@ -193,7 +197,7 @@
 		}
 
 		.vac-message-container-offset {
-			margin-top: 10px;
+
 		}
 
 		.vac-message-box {

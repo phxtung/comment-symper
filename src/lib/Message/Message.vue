@@ -25,7 +25,10 @@
 		<div
 			v-else
 			class="vac-message-box"
-			:class="{ 'vac-offset-current': message.senderId === currentUserId }"
+			:class="{
+				'vac-offset-current': message.senderId === currentUserId,
+				'vac-message-reply': !message.deleted && message.replyMessage
+			}"
 		>
 			<slot name="message" v-bind="{ message }">
 				<div
@@ -50,7 +53,7 @@
 						@mouseleave="onLeaveMessage"
 					>
 						<div
-							v-if="roomUsers.length > 2 && message.senderId !== currentUserId"
+							v-if="roomUsers.length > 2"
 							class="vac-text-username"
 							:class="{
 								'vac-username-reply': !message.deleted && message.replyMessage
@@ -152,6 +155,7 @@
 								<svg-icon name="pencil" />
 							</slot>
 						</div>
+						<span style="margin-right:10px;cursor:default" @click="messageActionHandler('replyMessage')">Trả lời</span>
 						<span>{{ message.timestamp }}</span>
 						<span v-if="isCheckmarkVisible">
 							<slot name="checkmark-icon" v-bind="{ message }">
@@ -317,6 +321,8 @@ export default {
 			this.$emit('open-user-tag', { user })
 		},
 		messageActionHandler(action) {
+			console.log(action)
+			console.log(this.message)
 			this.messageHover = false
 			this.hoverMessageId = null
 
