@@ -1,12 +1,12 @@
 <template>
 	<div :id="message._id" ref="message" class="vac-message-wrapper">
-		<div v-if="showDate" class="vac-card-info vac-card-date">
+		<!-- <div v-if="showDate" class="vac-card-info vac-card-date">
 			{{ message.date }}
 		</div>
 
 		<div v-if="newMessage._id === message._id" class="vac-line-new">
 			{{ textMessages.NEW_MESSAGES }}
-		</div>
+		</div> -->
 
 		<div v-if="message.system" class="vac-card-info vac-card-system">
 			<format-message
@@ -184,7 +184,6 @@
 <script>
 import SvgIcon from '../../components/SvgIcon/SvgIcon'
 import FormatMessage from '../../components/FormatMessage/FormatMessage'
-
 // import MessageReply from './MessageReply/MessageReply'
 import MessageFiles from './MessageFiles/MessageFiles'
 import MessageActions from './MessageActions/MessageActions'

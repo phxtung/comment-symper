@@ -48,9 +48,9 @@
 									{{ textMessages.MESSAGES_EMPTY }}
 								</slot>
 							</div>
-							<div v-if="showMessagesStarted" class="vac-text-started">
+							<!-- <div v-if="showMessagesStarted" class="vac-text-started">
 								{{ textMessages.CONVERSATION_STARTED }} {{ messages[0].date }}
-							</div>
+							</div> -->
 						</div>
 					</transition>
 					<transition name="vac-fade-message">
